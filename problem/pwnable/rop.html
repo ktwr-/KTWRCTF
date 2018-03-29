@@ -21,7 +21,7 @@
 		$stmt = $pdo->prepare('SELECT COUNT(*) FROM userData');
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
-		$stmt = $pdo->prepare('SELECT COUNT(*) FROM solveFlag WHERE crackme2 > 0');
+		$stmt = $pdo->prepare('SELECT COUNT(*) FROM solveFlag WHERE rop > 0');
 		$stmt->execute();
 		$solvenum = $stmt->fetchColumn();
 				
@@ -76,7 +76,7 @@
             //POSTメソッドで送るデータを定義します var data = {パラメータ名 : 値};
 						
 						//var user = <?php echo $name; ?>;
-            var data = { 'flag' : $('#flag').val(), id : 'crackme2', 'login' : "<?php echo h($name); ?>", 'point' : 100};
+            var data = { 'flag' : $('#flag').val(), id : 'rop', 'login' : "<?php echo h($name); ?>", 'point' : 10};
 
             /**
              * Ajax通信メソッド
@@ -179,9 +179,10 @@
 					<h1><small>Problem->Test</small></h1>
 				</div>
 				<div class="row">
-					<h1> Crackme2 [100pt]</h1>
+					<h1> Ropasaurusrex[10pt]</h1>
 					<div class="well">
-						<a href="./crackme2.out">File</a><code>sha1:44edc7905df9855c9bdac90b8139998aa3d8f8cf</code>
+						<a href="./ropasaurusrex">ropasaurusrex</a>
+						<a href="./libc.so.6">libc.so.6</a>
 					</div>
 					<form method="POST">
 						<input id="flag" type="text" name="flag" style="width:50%">
