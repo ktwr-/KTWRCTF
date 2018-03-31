@@ -2,10 +2,10 @@
 	$problemcount = 1;
 	#$test= scandir("/usr/share/nginx/html/problem/test/");
 	#$pwnable = scandir("/usr/share/nginx/html/problem/pwnable/");
-	$web= scandir("/usr/share/nginx/html/problem/web/");
-	$crypto= scandir("/usr/share/nginx/html/problem/crypto/");
-	$network= scandir("/usr/share/nginx/html/problem/network/");
-	$for= scandir("/usr/share/nginx/html/problem/for/");
+	#$web= scandir("/usr/share/nginx/html/problem/web/");
+	#$crypto= scandir("/usr/share/nginx/html/problem/crypto/");
+	#$network= scandir("/usr/share/nginx/html/problem/network/");
+	#$for= scandir("/usr/share/nginx/html/problem/for/");
 
 	$test = [
 		'test.html',
@@ -16,7 +16,9 @@
 		'shell_code.html',
 		'rewrite_address.html',
 		'get_shell.html',
-		'crackme.html'
+		'crackme.html',
+		'ret2libc.html',
+		'rop.html'
 	];
 
 	$web = [
@@ -35,11 +37,13 @@
 	];
 
 	$for = [
-		'steghide.html'
+		'steghide.html',
+		'john.html'
 	];
 
 	$rev = [
 		'android1.html',
+		'crackme.html'
 	];
 
 	

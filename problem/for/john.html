@@ -21,7 +21,7 @@
 		$stmt = $pdo->prepare('SELECT COUNT(*) FROM userData');
 		$stmt->execute();
 		$count = $stmt->fetchColumn();
-		$stmt = $pdo->prepare('SELECT COUNT(*) FROM solveFlag WHERE test > 0');
+		$stmt = $pdo->prepare('SELECT COUNT(*) FROM solveFlag WHERE john > 0');
 		$stmt->execute();
 		$solvenum = $stmt->fetchColumn();
 				
@@ -76,7 +76,7 @@
             //POSTメソッドで送るデータを定義します var data = {パラメータ名 : 値};
 						
 						//var user = <?php echo $name; ?>;
-            var data = { 'flag' : $('#flag').val(), id : 'test', 'login' : "<?php echo h($name); ?>", 'point' : 10};
+            var data = { 'flag' : $('#flag').val(), id : 'john', 'login' : "<?php echo h($name); ?>", 'point' : 10};
 
             /**
              * Ajax通信メソッド
@@ -179,12 +179,10 @@
 					<h1><small>Problem->Test</small></h1>
 				</div>
 				<div class="row">
-					<h1> Test Problem [10pt]</h1>
+					<h1> John [50pt]</h1>
 					<div class="well">
-						このサイトではセキュリティに関する問題を出題し，それに対して答えを見つけるサイトです。
-						答えの形式は<code>ktwrctf{*******}</code>もしくは<code>KTWRCTF{*******}</code>という形式でこれを送信してください。
-						今回はテスト問題です。下のコードを送信してみてください
-						<code>ktwrctf{Welcome_to_CTF}</code>
+						I forgot the password of zip file. Please find the password!!!<br>
+						<a href="./john.zip">Zip File</a>
 					</div>
 					<form method="POST">
 						<input id="flag" type="text" name="flag" style="width:50%">
